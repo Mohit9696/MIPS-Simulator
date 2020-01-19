@@ -1,0 +1,117 @@
+01  add        000000     rs         rt         rd         00000      100000    
+01  addu       000000     rs         rt         rd         00000      100001    
+01  and        000000     rs         rt         rd         00000      100100    
+01  dadd       000000     rs         rt         rd         00000      101100    
+01  daddu      000000     rs         rt         rd         00000      101101    
+01  dsllv      000000     rs         rt         rd         00000      010100    
+01  dsrav      000000     rs         rt         rd         00000      010111    
+01  dsrlv      000000     rs         rt         rd         00000      010110    
+01  dsub       000000     rs         rt         rd         00000      101110    
+01  dsubu      000000     rs         rt         rd         00000      101111    
+01  movn       000000     rs         rt         rd         00000      001011    
+01  movz       000000     rs         rt         rd         00000      001010    
+01  nor        000000     rs         rt         rd         00000      100111    
+01  or         000000     rs         rt         rd         00000      100101    
+01  sllv       000000     rs         rt         rd         00000      000100    
+01  slt        000000     rs         rt         rd         00000      101010    
+01  sltu       000000     rs         rt         rd         00000      101011    
+01  srav       000000     rs         rt         rd         00000      000111    
+01  srlv       000000     rs         rt         rd         00000      000110    
+01  sub        000000     rs         rt         rd         00000      100010    
+01  subu       000000     rs         rt         rd         00000      100011    
+01  xor        000000     rs         rt         rd         00000      100110    
+02  dsll       000000     00000      rt         rd         sa         111000    
+02  dsll32     000000     00000      rt         rd         sa         111100    
+02  dsra       000000     00000      rt         rd         sa         111011    
+02  dsra32     000000     00000      rt         rd         sa         111111    
+02  dsrl       000000     00000      rt         rd         sa         111010    
+02  dsrl32     000000     00000      rt         rd         sa         111110    
+02  sll        000000     00000      rt         rd         sa         000000    
+02  sra        000000     00000      rt         rd         sa         000011    
+02  srl        000000     00000      rt         rd         sa         000010    
+03  ddiv       000000     rs         rt         0000000000 011110    
+03  ddivu      000000     rs         rt         0000000000 011111    
+03  div        000000     rs         rt         0000000000 011010    
+03  divu       000000     rs         rt         0000000000 011011    
+03  dmult      000000     rs         rt         0000000000 011100    
+03  dmultu     000000     rs         rt         0000000000 011101    
+03  mult       000000     rs         rt         0000000000 011000    
+03  multu      000000     rs         rt         0000000000 011001    
+04  teq        000000     rs         rt         code       110100    
+04  tge        000000     rs         rt         code       110000    
+04  tgeu       000000     rs         rt         code       110001    
+04  tlt        000000     rs         rt         code       110010    
+04  tltu       000000     rs         rt         code       110011    
+04  tne        000000     rs         rt         code       110110    
+05  jr         000000     rs         000000000000000 001000    
+05  mthi       000000     rs         000000000000000 010001    
+05  mtlo       000000     rs         000000000000000 010011    
+06  jalr       000000     rs         00000      rd         00000      001001    
+07  sync       000000     000000000000000 stype      001111    
+08  mfhi       000000     0000000000 rd         00000      010000    
+08  mflo       000000     0000000000 rd         00000      010010    
+09  break      000000     code       001101    
+09  syscall    000000     code       001100    
+10  bgez       000001     rs         00001      offset    
+10  bgezal     000001     rs         10001      offset    
+10  bgezall    000001     rs         10011      offset    
+10  bgezl      000001     rs         00011      offset    
+10  bltz       000001     rs         00000      offset    
+10  bltzal     000001     rs         10000      offset    
+10  bltzall    000001     rs         10010      offset    
+10  bltzl      000001     rs         00010      offset    
+11  teqi       000001     rs         01100      immediate 
+11  tgei       000001     rs         01000      immediate 
+11  tgeiu      000001     rs         01001      immediate 
+11  tlti       000001     rs         01010      immediate 
+11  tltiu      000001     rs         01011      immediate 
+11  tnei       000001     rs         01110      immediate 
+20  lui        001111     00000      rt         immediate 
+21  pref       110011     base       hint       offset    
+22  lb         100000     base       rt         offset    
+22  lbu        100100     base       rt         offset    
+22  ld         110111     base       rt         offset    
+22  ldcz       1101zz     base       rt         offset    
+22  ldl        011010     base       rt         offset    
+22  ldr        011011     base       rt         offset    
+22  lh         100001     base       rt         offset    
+22  lhu        100101     base       rt         offset    
+22  ll         110000     base       rt         offset    
+22  lld        110100     base       rt         offset    
+22  lw         100011     base       rt         offset    
+22  lwcz       1100zz     base       rt         offset    
+22  lwl        100010     base       rt         offset    
+22  lwr        100110     base       rt         offset    
+22  lwu        100111     base       rt         offset    
+22  sb         101000     base       rt         offset    
+22  sc         111000     base       rt         offset    
+22  scd        111100     base       rt         offset    
+22  sd         111111     base       rt         offset    
+22  sdcz       1111zz     base       rt         offset    
+22  sdl        101100     base       rt         offset    
+22  sdr        101101     base       rt         offset    
+22  sh         101001     base       rt         offset    
+22  sw         101011     base       rt         offset    
+22  swcz       1110zz     base       rt         offset    
+22  swl        101010     base       rt         offset    
+22  swr        101110     base       rt         offset    
+23  copz       0100zz     copfun    
+24  j          000010     instrindex
+24  jal        000011     instrindex
+25  bgtz       000111     rs         00000      offset    
+25  bgtzl      010111     rs         00000      offset    
+25  blez       000110     rs         00000      offset    
+25  blezl      010110     rs         00000      offset    
+26  addi       001000     rs         rt         immediate 
+26  addiu      001001     rs         rt         immediate 
+26  andi       001100     rs         rt         immediate 
+26  daddi      011000     rs         rt         immediate 
+26  daddiu     011001     rs         rt         immediate 
+26  ori        001101     rs         rt         immediate 
+26  slti       001010     rs         rt         immediate 
+26  sltiu      001011     rs         rt         immediate 
+26  xori       001110     rs         rt         immediate 
+27  beq        000100     rs         rt         offset    
+27  beql       010100     rs         rt         offset    
+27  bne        000101     rs         rt         offset    
+27  bnel       010101     rs         rt         offset    
